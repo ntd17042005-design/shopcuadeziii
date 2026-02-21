@@ -2,9 +2,11 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>shopcuadeziii • Premium Store</title>
   <meta name="description" content="ChatGPT Pro & YouTube Premium giá rẻ – uy tín. Nhấn mua là chuyển Facebook." />
+  <!-- File đã được sửa lỗi cú pháp HTML/JS để chạy ổn định trên GitHub Pages -->
+
   <style>
     :root{
       --bg:#070A12;
@@ -316,7 +318,6 @@
       letter-spacing:.2px;
     }
 
-    /* Nổi bật: list dọc giống ảnh */
     .feature-actions{
       position:relative;
       padding:0 18px 18px;
@@ -580,12 +581,12 @@
           <div class="feature-inner">
             <div>
               <div class="badge hot">🔥 HOT • BÁN CHẠY NHẤT</div>
-              <p class="feature-title">ChatGPT Pro 1 Tháng</p>
+              <p class="feature-title">ChatGPT Pro</p>
               <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
             </div>
             <div class="big-price">
               <div class="from">Giá từ</div>
-              <div class="price">40.000đ</div>
+              <div class="price">80.000đ</div>
             </div>
           </div>
 
@@ -613,28 +614,28 @@
           <div class="feature-inner">
             <div>
               <div class="badge hot">🔥 HOT • BÁN CHẠY NHẤT</div>
-              <p class="feature-title">YouTube Premium 1 Tháng</p>
+              <p class="feature-title">YouTube Premium</p>
               <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
             </div>
             <div class="big-price">
               <div class="from">Giá từ</div>
-              <div class="price">40.000đ</div>
+              <div class="price">20.000đ</div>
             </div>
           </div>
 
           <div class="feature-actions">
             <div class="option-list">
               <div class="option-row" data-buy="yt-1m-20">
-                <div class="left">YouTube Premium – 2 Tháng</div>
-                <div class="right">80.000 VNĐ</div>
+                <div class="left">YouTube Premium – 1 Tháng</div>
+                <div class="right">20.000 VNĐ</div>
               </div>
               <div class="option-row" data-buy="yt-6m-fixed-350">
                 <div class="left">YouTube Premium – 6 Tháng (Cố định)</div>
-                <div class="right">450.000 VNĐ</div>
+                <div class="right">350.000 VNĐ</div>
               </div>
               <div class="option-row" data-buy="yt-1y-change-235">
                 <div class="left">YouTube Premium – 1 Năm (Đổi hàng tháng)</div>
-                <div class="right">280.000 VNĐ</div>
+                <div class="right">235.000 VNĐ</div>
               </div>
             </div>
             <button class="btn buy feature-cta" data-buy="yt-1m-20">Mua Ngay</button>
@@ -647,7 +648,7 @@
       <div class="section-head">
         <div>
           <h3>Tất cả sản phẩm</h3>
-          <p>Tìm kiếm + lọc theo danh mục. Giá “-” là nhấn mua để chuyển Facebook hỏi giá.</p>
+          <p>Tìm kiếm + lọc theo danh mục. Nhấn “Mua ngay” để chuyển Facebook.</p>
         </div>
       </div>
 
@@ -728,7 +729,7 @@
               <div class="check">✓</div>
               <div>
                 <b>Chỉ dùng Facebook</b>
-                <span>Nhấn “Mua ngay” để chuyển thẳng sang Facebook.</span>
+                <span>Nhấn “Liên hệ Facebook” để chuyển thẳng sang Facebook.</span>
               </div>
             </li>
           </ul>
@@ -749,7 +750,6 @@
   <script>
     const CONFIG = { facebookLink: "https://www.facebook.com/dezi1704" };
 
-    /* Icon màu giống thật */
     const ICONS = {
       youtube: `
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -757,7 +757,6 @@
           <path d="M11 10v4l4-2-4-2z" fill="#FFFFFF"/>
         </svg>
       `,
-      /* ChatGPT icon FIXED (không lỗi) */
       chatgpt: `
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="12" r="9" fill="#10A37F"/>
@@ -844,11 +843,12 @@
       { id:"chatgpt-3m-120", title:"ChatGPT Pro (3 Tháng)", price:120000, priceText:"120.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
       { id:"chatgpt-6m-220", title:"ChatGPT Pro (6 Tháng)", price:220000, priceText:"220.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
 
-      // Entertainment
-      { id:"netflix-1m", title:"Netflix Premium 4k (1 Tháng)", price:80000, priceText:80.000 VNĐ"-", cat:"entertain", icon:"netflix", tags:["contact"] },
-      { id:"netflix-3m", title:"Netflix Premium 4k (3 Tháng)", price:200000, priceText:200.000 VNĐ"-", cat:"entertain", icon:"netflix", tags:["contact"] },
-      { id:"netflix-6m", title:"Netflix Premium 4k (6 Tháng)", price:460000, priceText:460.000 VNĐ"-", cat:"entertain", icon:"netflix", tags:["contact"] },
-      { id:"netflix-12m", title:"Netflix Premium 4k (12 Tháng)", price:940000, priceText:940.000 VNĐ"-", cat:"entertain", icon:"netflix", tags:["contact"] },
+      // Entertainment (Netflix FIX)
+      { id:"netflix-1m",  title:"Netflix Premium 4k (1 Tháng)",  price:80000,  priceText:"80.000 VNĐ",  cat:"entertain", icon:"netflix", tags:["contact"] },
+      { id:"netflix-3m",  title:"Netflix Premium 4k (3 Tháng)",  price:200000, priceText:"200.000 VNĐ", cat:"entertain", icon:"netflix", tags:["contact"] },
+      { id:"netflix-6m",  title:"Netflix Premium 4k (6 Tháng)",  price:460000, priceText:"460.000 VNĐ", cat:"entertain", icon:"netflix", tags:["contact"] },
+      { id:"netflix-12m", title:"Netflix Premium 4k (12 Tháng)", price:940000, priceText:"940.000 VNĐ", cat:"entertain", icon:"netflix", tags:["contact"] },
+
       { id:"spotify-4m-99", title:"Spotify Premium (4 Tháng)", price:120000, priceText:"120.000 VNĐ", cat:"entertain", icon:"spotify", tags:["deal"] },
 
       // Creative
@@ -877,7 +877,7 @@
       if(p.tags.includes("hot")) s += 50;
       if(p.tags.includes("deal")) s += 20;
       if(p.cat === "youtube") s += 10;
-      if(p.id.startsWith("chatgpt")) s += 10;
+      if(String(p.id).startsWith("chatgpt")) s += 10;
       return s;
     }
 
@@ -959,14 +959,11 @@
       const filtered = PRODUCTS.filter(matches);
       const list = sorted(filtered);
       grid.innerHTML = list.map(card).join("");
-
-      // ✅ yêu cầu: nhấn mua/nhấn dòng gói => mở Facebook
       grid.querySelectorAll("[data-buy]").forEach(btn=>{
         btn.addEventListener("click", openFB);
       });
     }
 
-    // Controls
     qEl.addEventListener("input", (e)=>{ state.q = e.target.value; render(); });
     catEl.addEventListener("change",(e)=>{ state.cat = e.target.value; render(); });
     sortEl.addEventListener("change",(e)=>{ state.sort = e.target.value; render(); });
@@ -980,18 +977,14 @@
       });
     });
 
-    // FB buttons
     document.getElementById("btnFBTop").addEventListener("click", openFB);
     document.getElementById("btnFBHero").addEventListener("click", openFB);
     document.getElementById("btnFBPay").addEventListener("click", openFB);
 
-    // Nổi bật: click vào option-row hoặc nút mua => mở Facebook
     document.querySelectorAll("[data-buy]").forEach(el=> el.addEventListener("click", openFB));
 
-    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Reveal
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add("show"); });
     },{ threshold: .12 });
@@ -1001,5 +994,3 @@
   </script>
 </body>
 </html>
-
-
