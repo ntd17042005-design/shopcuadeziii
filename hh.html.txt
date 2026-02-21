@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>shopcuadeziii • Premium Store</title>
+  <meta name="description" content="ChatGPT Pro & YouTube Premium giá rẻ – uy tín. Nhấn mua là chuyển Facebook." />
+  <style>
+    :root{
+      --bg:#070A12;
+      --text:#EAF0FF;
+      --muted:rgba(234,240,255,.72);
+      --line:rgba(255,255,255,.12);
+      --glow1:#5FE6FF;
+      --glow2:#8A5CFF;
+      --glow3:#FF4FD8;
+      --ok:#39ff88;
+      --shadow: 0 20px 60px rgba(0,0,0,.55);
+      --radius:22px;
+      --radius2:16px;
+      --max:1180px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(138,92,255,.22), transparent 55%),
+                  radial-gradient(900px 600px at 85% 20%, rgba(95,230,255,.18), transparent 55%),
+                  radial-gradient(700px 500px at 60% 110%, rgba(255,79,216,.12), transparent 55%),
+                  var(--bg);
+      overflow-x:hidden;
+    }
+    a{ color:inherit; text-decoration:none; }
+    button, input, select{ font:inherit; }
+
+    .grain{
+      pointer-events:none;
+      position:fixed; inset:-50%;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+      opacity:.06;
+      transform:translate3d(0,0,0);
+      animation:grain 8s steps(10) infinite;
+      mix-blend-mode: overlay;
+    }
+    @keyframes grain{
+      0%,100%{ transform:translate(0,0); }
+      10%{ transform:translate(-5%, -10%); }
+      20%{ transform:translate(-15%, 5%); }
+      30%{ transform:translate(7%, -25%); }
+      40%{ transform:translate(-5%, 25%); }
+      50%{ transform:translate(-15%, 10%); }
+      60%{ transform:translate(15%, 0%); }
+      70%{ transform:translate(0%, 15%); }
+      80%{ transform:translate(3%, 35%); }
+      90%{ transform:translate(-10%, 10%); }
+    }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:20px 18px 80px; }
+
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(7,10,18,.75), rgba(7,10,18,.35));
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar .inner{
+      max-width:var(--max); margin:0 auto; padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .brand h1{ margin:0; font-size:15px; letter-spacing:.4px; }
+    .brand p{ margin:2px 0 0; font-size:12px; color:var(--muted); }
+
+    .logo-img{
+      width:44px; height:44px;
+      border-radius:14px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 18px 40px rgba(138,92,255,.22);
+      background: rgba(255,255,255,.06);
+    }
+
+    .nav{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .pill{
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      transition:transform .18s ease, background .18s ease, border-color .18s ease;
+      cursor:pointer;
+      font-size:13px;
+      user-select:none;
+    }
+    .pill:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.18); }
+    .pill.primary{
+      border:none;
+      background: linear-gradient(90deg, rgba(95,230,255,.9), rgba(138,92,255,.9), rgba(255,79,216,.75));
+      box-shadow: 0 12px 30px rgba(138,92,255,.28);
+      color:#081019;
+      font-weight:900;
+    }
+
+    .hero{
+      margin-top:18px;
+      padding:28px;
+      border-radius: calc(var(--radius) + 6px);
+      border: 1px solid rgba(255,255,255,.12);
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(95,230,255,.18), transparent 62%),
+        radial-gradient(900px 500px at 85% 20%, rgba(138,92,255,.20), transparent 62%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:20px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){ .hero-grid{ grid-template-columns:1fr; } }
+
+    .hero h2{
+      margin:0;
+      font-size:42px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    .hero h2 .grad{
+      background: linear-gradient(90deg, var(--glow1), var(--glow2), var(--glow3));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      filter: drop-shadow(0 10px 26px rgba(138,92,255,.22));
+    }
+    .hero p{
+      margin:12px 0 18px;
+      color: var(--muted);
+      font-size:15px;
+      line-height:1.6;
+      max-width: 62ch;
+    }
+    .cta-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+
+    .stats{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      padding:16px;
+      display:grid; gap:12px;
+      align-content:start;
+      position:relative;
+      overflow:hidden;
+    }
+    .stats:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle at 30% 30%, rgba(95,230,255,.25), transparent 50%),
+                  radial-gradient(circle at 70% 60%, rgba(138,92,255,.25), transparent 52%);
+      filter: blur(10px);
+      opacity:.85;
+      animation:float 6s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes float{
+      0%,100%{ transform: translate3d(0,0,0); }
+      50%{ transform: translate3d(2%, -2%, 0); }
+    }
+    .stat{
+      position:relative;
+      border-radius: 16px;
+      padding:12px 12px;
+      background: rgba(7,10,18,.55);
+      border:1px solid rgba(255,255,255,.10);
+      display:flex; gap:12px; align-items:center;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(90deg, var(--glow1), var(--glow2), var(--glow3));
+      box-shadow: 0 0 0 6px rgba(95,230,255,.08), 0 0 24px rgba(138,92,255,.25);
+      flex:0 0 auto;
+    }
+    .stat b{ display:block; font-size:13px; }
+    .stat span{ display:block; font-size:12px; color:var(--muted); margin-top:2px; }
+
+    .section{ margin-top:26px; }
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px;
+      margin-bottom: 14px;
+    }
+    .section-head h3{ margin:0; font-size:18px; letter-spacing:.2px; }
+    .section-head p{ margin:0; color:var(--muted); font-size:13px; }
+
+    .controls{
+      display:flex; flex-wrap:wrap; gap:10px;
+      padding: 14px;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+    .field{
+      display:flex; gap:8px; align-items:center;
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(7,10,18,.45);
+      min-width: 220px;
+    }
+    .field input{
+      border:none; outline:none;
+      background:transparent; color:var(--text);
+      width:100%;
+    }
+    .field input::placeholder{ color:rgba(234,240,255,.45); }
+    .field select{
+      border:none; outline:none;
+      background:transparent; color:var(--text);
+      width:100%;
+      appearance:none;
+      cursor:pointer;
+    }
+    .mini{ min-width: 190px; }
+
+    .tag{
+      display:inline-flex; align-items:center; gap:7px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      cursor:pointer;
+      transition: transform .18s ease, background .18s ease;
+      font-size:12px;
+      user-select:none;
+    }
+    .tag:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); }
+    .tag.active{
+      color:#071018;
+      border:none;
+      background: linear-gradient(90deg, rgba(95,230,255,.95), rgba(138,92,255,.95));
+      font-weight:900;
+    }
+
+    .featured{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    @media (max-width: 920px){ .featured{ grid-template-columns:1fr; } }
+
+    .feature-card{
+      border-radius: calc(var(--radius) + 4px);
+      border:1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .feature-card:before{
+      content:"";
+      position:absolute; inset:-40%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(95,230,255,.30), transparent 55%),
+        radial-gradient(circle at 70% 60%, rgba(138,92,255,.30), transparent 55%),
+        radial-gradient(circle at 60% 30%, rgba(255,79,216,.18), transparent 55%);
+      filter: blur(14px);
+      opacity:.95;
+      animation:float 7s ease-in-out infinite;
+      pointer-events:none;
+    }
+    .feature-inner{
+      position:relative;
+      padding:18px;
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:12px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-size:12px; color:var(--text);
+      width:fit-content;
+      margin-bottom:10px;
+    }
+    .badge.hot{
+      background: linear-gradient(90deg, rgba(255,211,95,.95), rgba(255,79,216,.85));
+      color:#12070f;
+      border:none;
+      font-weight:950;
+      box-shadow: 0 14px 40px rgba(255,79,216,.22);
+      animation:pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{ transform: translateY(0); filter: drop-shadow(0 0 0 rgba(255,79,216,0)); }
+      50%{ transform: translateY(-1px); filter: drop-shadow(0 16px 22px rgba(255,79,216,.18)); }
+    }
+    .feature-title{ margin:0; font-size:18px; letter-spacing:.2px; font-weight:950; }
+    .feature-sub{ margin:8px 0 0; color:var(--muted); font-size:13px; line-height:1.5; }
+    .big-price{
+      text-align:right;
+      display:grid; gap:8px; justify-items:end;
+    }
+    .big-price .from{ font-size:12px; color: rgba(234,240,255,.70); }
+    .big-price .price{
+      font-size:22px; font-weight:950;
+      background: linear-gradient(90deg, var(--ok), var(--glow1));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      letter-spacing:.2px;
+    }
+
+    /* Nổi bật: list dọc giống ảnh */
+    .feature-actions{
+      position:relative;
+      padding:0 18px 18px;
+      display:block;
+    }
+    .option-list{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
+    }
+    .option-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(7,10,18,.45);
+      cursor:pointer;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .option-row:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.18);
+    }
+    .option-row .left{
+      font-weight:900;
+      font-size:13px;
+      color: rgba(234,240,255,.92);
+    }
+    .option-row .right{
+      font-weight:950;
+      color: #39ff88;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .btn{
+      border:none;
+      border-radius: 999px;
+      padding:10px 12px;
+      cursor:pointer;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      color:var(--text);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      font-size:12px;
+      font-weight:950;
+      user-select:none;
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18); }
+    .btn.buy{
+      border:none;
+      color:#071018;
+      background: linear-gradient(90deg, rgba(95,230,255,.95), rgba(138,92,255,.95), rgba(255,79,216,.75));
+      box-shadow: 0 14px 40px rgba(138,92,255,.22);
+    }
+    .feature-cta{
+      margin-top:14px;
+      width:100%;
+      justify-content:center;
+      padding:14px 16px;
+      border-radius: 16px;
+      font-size:13px;
+      font-weight:950;
+    }
+
+    .grid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 1100px){ .grid{ grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 840px){ .grid{ grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px){ .grid{ grid-template-columns: 1fr; } }
+
+    .card{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      overflow:hidden;
+      transition: transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease;
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      will-change: transform;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.18);
+      box-shadow: 0 18px 50px rgba(0,0,0,.38);
+    }
+    .card .top{
+      padding:14px 14px 12px;
+      display:flex; gap:12px; align-items:flex-start;
+    }
+    .app{
+      width:44px; height:44px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(7,10,18,.55);
+      display:grid; place-items:center;
+      flex:0 0 auto;
+      overflow:hidden;
+    }
+    .app svg{ width:28px; height:28px; }
+    .name{
+      margin:0;
+      font-weight:950;
+      font-size:14px;
+      line-height:1.25;
+      letter-spacing:.1px;
+    }
+    .meta{
+      margin:6px 0 0;
+      color: var(--muted);
+      font-size:12px;
+      line-height:1.4;
+    }
+    .card .bottom{
+      padding: 0 14px 14px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .price{
+      font-weight:950;
+      font-size:14px;
+      color: var(--ok);
+      letter-spacing:.2px;
+    }
+    .price.na{ color: rgba(234,240,255,.55); font-weight:900; }
+
+    .two{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 920px){ .two{ grid-template-columns: 1fr; } }
+
+    .panel{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      padding: 16px;
+    }
+    .panel h4{ margin:0 0 10px; font-size:15px; letter-spacing:.2px; }
+    .list{ margin:0; padding:0; list-style:none; display:grid; gap:8px; }
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px 10px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(7,10,18,.35);
+    }
+    .check{
+      width:22px; height:22px; border-radius: 8px;
+      background: linear-gradient(90deg, rgba(57,255,136,.95), rgba(95,230,255,.85));
+      display:grid; place-items:center;
+      color:#061018;
+      flex:0 0 auto;
+      box-shadow: 0 16px 40px rgba(57,255,136,.12);
+      font-weight:950;
+    }
+    .li b{ font-size:13px; }
+    .li span{ display:block; margin-top:2px; color:var(--muted); font-size:12px; line-height:1.45; }
+
+    footer{
+      margin-top: 22px;
+      color: rgba(234,240,255,.65);
+      font-size: 12px;
+      text-align:center;
+    }
+
+    .reveal{
+      opacity:0;
+      transform: translateY(14px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <img class="logo-img" src="logo.png" alt="shopcuadeziii logo" />
+        <div>
+          <h1>shopcuadeziii</h1>
+          <p>ChatGPT Pro & YouTube Premium • Giá rẻ • Uy tín</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="pill" href="#sanpham">Sản phẩm</a>
+        <a class="pill" href="#baohanh">Bảo hành</a>
+        <button class="pill primary" id="btnFBTop">Liên hệ Facebook</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero reveal">
+      <div class="hero-grid">
+        <div>
+          <h2>
+            <span class="grad">ChatGPT Pro & YouTube Premium</span><br/>
+            Giá rẻ nhất – Uy tín nhất thị trường
+          </h2>
+          <p>
+            Nhấn <b>Mua ngay</b> là chuyển thẳng sang Facebook để chốt đơn nhanh.
+            Giao nhanh, hỗ trợ 24/7, bảo hành trong thời gian sử dụng.
+          </p>
+
+          <div class="cta-row">
+            <a class="pill primary" href="#sanpham">Xem sản phẩm</a>
+            <button class="pill" id="btnFBHero">Liên hệ Facebook</button>
+          </div>
+        </div>
+
+        <aside class="stats">
+          <div class="stat">
+            <div class="dot"></div>
+            <div>
+              <b>Giao nhanh</b>
+              <span>5–10 phút (giờ làm việc)</span>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="dot"></div>
+            <div>
+              <b>Bảo hành</b>
+              <span>Hỗ trợ đổi/khắc phục nếu lỗi</span>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="dot"></div>
+            <div>
+              <b>Uy tín</b>
+              <span>Nhắn Facebook để chốt nhanh</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section reveal" id="noibat">
+      <div class="section-head">
+        <div>
+          <h3>Nổi bật nhất</h3>
+          <p>Tập trung 2 sản phẩm chủ lực: ChatGPT Pro & YouTube Premium</p>
+        </div>
+      </div>
+
+      <div class="featured">
+        <!-- CHATGPT FEATURE -->
+        <div class="feature-card">
+          <div class="feature-inner">
+            <div>
+              <div class="badge hot">🔥 HOT • BÁN CHẠY NHẤT</div>
+              <p class="feature-title">ChatGPT Pro 1 Tháng</p>
+              <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
+            </div>
+            <div class="big-price">
+              <div class="from">Giá từ</div>
+              <div class="price">40.000đ</div>
+            </div>
+          </div>
+
+          <div class="feature-actions">
+            <div class="option-list">
+              <div class="option-row" data-buy="chatgpt-2m-80">
+                <div class="left">Slot Farm – 2 Tháng</div>
+                <div class="right">80.000 VNĐ</div>
+              </div>
+              <div class="option-row" data-buy="chatgpt-3m-120">
+                <div class="left">Slot Farm – 3 Tháng</div>
+                <div class="right">120.000 VNĐ</div>
+              </div>
+              <div class="option-row" data-buy="chatgpt-6m-220">
+                <div class="left">Slot Farm – 6 Tháng</div>
+                <div class="right">220.000 VNĐ</div>
+              </div>
+            </div>
+            <button class="btn buy feature-cta" data-buy="chatgpt-2m-80">Mua Ngay</button>
+          </div>
+        </div>
+
+        <!-- YOUTUBE FEATURE -->
+        <div class="feature-card">
+          <div class="feature-inner">
+            <div>
+              <div class="badge hot">🔥 HOT • BÁN CHẠY NHẤT</div>
+              <p class="feature-title">YouTube Premium 1 Tháng</p>
+              <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
+            </div>
+            <div class="big-price">
+              <div class="from">Giá từ</div>
+              <div class="price">30.000đ</div>
+            </div>
+          </div>
+
+          <div class="feature-actions">
+            <div class="option-list">
+              <div class="option-row" data-buy="yt-1m-20">
+                <div class="left">YouTube Premium – 2 Tháng</div>
+                <div class="right">60.000 VNĐ</div>
+              </div>
+              <div class="option-row" data-buy="yt-6m-fixed-350">
+                <div class="left">YouTube Premium – 6 Tháng (Cố định)</div>
+                <div class="right">350.000 VNĐ</div>
+              </div>
+              <div class="option-row" data-buy="yt-1y-change-235">
+                <div class="left">YouTube Premium – 1 Năm (Đổi hàng tháng)</div>
+                <div class="right">235.000 VNĐ</div>
+              </div>
+            </div>
+            <button class="btn buy feature-cta" data-buy="yt-1m-20">Mua Ngay</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="sanpham">
+      <div class="section-head">
+        <div>
+          <h3>Tất cả sản phẩm</h3>
+          <p>Tìm kiếm + lọc theo danh mục. Giá “-” là nhấn mua để chuyển Facebook hỏi giá.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="field" title="Tìm theo tên sản phẩm">
+          <span style="opacity:.75">🔎</span>
+          <input id="q" placeholder="Tìm: ChatGPT, YouTube, Netflix, Canva..." />
+        </div>
+
+        <div class="field mini" title="Lọc danh mục">
+          <span style="opacity:.75">📂</span>
+          <select id="cat">
+            <option value="all">Tất cả danh mục</option>
+            <option value="youtube">YouTube Premium</option>
+            <option value="ai">ChatGPT & AI Tools</option>
+            <option value="entertain">Giải trí</option>
+            <option value="cloud">Cloud & Lưu trữ</option>
+            <option value="creative">Thiết kế & Sáng tạo</option>
+            <option value="office">Văn phòng</option>
+            <option value="game">Game & Khác</option>
+          </select>
+        </div>
+
+        <div class="field mini" title="Sắp xếp">
+          <span style="opacity:.75">↕️</span>
+          <select id="sort">
+            <option value="hot">Ưu tiên nổi bật</option>
+            <option value="priceAsc">Giá tăng dần</option>
+            <option value="priceDesc">Giá giảm dần</option>
+            <option value="nameAsc">Tên A → Z</option>
+          </select>
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+          <div class="tag active" data-tag="all">Tất cả</div>
+          <div class="tag" data-tag="hot">Bán chạy</div>
+          <div class="tag" data-tag="deal">Giá rẻ</div>
+          <div class="tag" data-tag="contact">Liên hệ</div>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="section reveal" id="baohanh">
+      <div class="two">
+        <div class="panel">
+          <h4>Vì sao chọn shopcuadeziii?</h4>
+          <ul class="list">
+            <li class="li">
+              <div class="check">✓</div>
+              <div>
+                <b>Uy tín – rõ ràng</b>
+                <span>Tư vấn nhanh qua Facebook, minh bạch gói & giá.</span>
+              </div>
+            </li>
+            <li class="li">
+              <div class="check">✓</div>
+              <div>
+                <b>Giao nhanh</b>
+                <span>Thông thường 5–10 phút (giờ làm việc).</span>
+              </div>
+            </li>
+            <li class="li">
+              <div class="check">✓</div>
+              <div>
+                <b>Hỗ trợ 24/7</b>
+                <span>Có vấn đề cứ nhắn Facebook, mình xử lý sớm nhất.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel" id="thanhtoan">
+          <h4>Liên hệ mua hàng</h4>
+          <ul class="list">
+            <li class="li">
+              <div class="check">✓</div>
+              <div>
+                <b>Chỉ dùng Facebook</b>
+                <span>Nhấn “Mua ngay” để chuyển thẳng sang Facebook.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn buy" id="btnFBPay">Liên hệ Facebook</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      <div>© <span id="year"></span> shopcuadeziii • Premium Store</div>
+      <div style="margin-top:6px;">Tip: Muốn thêm/sửa giá sản phẩm chỉ cần chỉnh trong mục <b>PRODUCTS</b>.</div>
+    </footer>
+  </main>
+
+  <script>
+    const CONFIG = { facebookLink: "https://www.facebook.com/dezi1704" };
+
+    /* Icon màu giống thật */
+    const ICONS = {
+      youtube: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="10" rx="3" fill="#FF0000"/>
+          <path d="M11 10v4l4-2-4-2z" fill="#FFFFFF"/>
+        </svg>
+      `,
+      /* ChatGPT icon FIXED (không lỗi) */
+      chatgpt: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="#10A37F"/>
+          <path d="M12 6.2
+                   c1.6 0 2.9 1.3 2.9 2.9
+                   c0 1.1-.6 2.1-1.6 2.6
+                   l1.2 2.1
+                   c.2.4.1.9-.3 1.1
+                   c-1.2.8-2.8.5-3.6-.7
+                   l-.8-1.4
+                   c-.2-.4-.7-.6-1.1-.4
+                   c-1.3.6-2.9.1-3.5-1.2
+                   c-.6-1.3-.1-2.9 1.2-3.5
+                   l1.2-.6
+                   c.4-.2.6-.7.4-1.1
+                   c-.6-1.3-.1-2.9 1.2-3.5
+                   c.4-.2.8-.3 1.2-.3Z"
+                fill="#E8FFF7" opacity=".95"/>
+        </svg>
+      `,
+      netflix: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 4h3l4 10V4h3v16c-1 .1-2 .2-3 .4l-4-10v10c-1-.1-2-.2-3-.3V4Z" fill="#E50914"/>
+        </svg>
+      `,
+      spotify: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="#1DB954"/>
+          <path d="M7.5 10.3c3.9-1 7.5-.6 10.7 1.1" stroke="#0B1B12" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M8.2 13c3-.8 5.9-.4 8.5 1" stroke="#0B1B12" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M9 15.6c2.1-.5 4.1-.2 5.9.7" stroke="#0B1B12" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      `,
+      discord: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 7.4c2-1.1 8-1.1 10 0 1.7 2 2.3 4.2 2 6.6-2.1 1.7-4.3 2.3-7 2.4-2.7-.1-4.9-.7-7-2.4-.3-2.4.3-4.6 2-6.6Z" fill="#5865F2"/>
+          <circle cx="9.7" cy="13.2" r="1.2" fill="#FFFFFF"/>
+          <circle cx="14.3" cy="13.2" r="1.2" fill="#FFFFFF"/>
+        </svg>
+      `,
+      canva: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="#00C4CC"/>
+          <path d="M14.8 9.4c-.7-.7-1.7-1.2-2.8-1.2-2.2 0-4 1.8-4 4s1.8 4 4 4c1.1 0 2.1-.4 2.8-1.1"
+                fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      `,
+      office: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 4.8 17 3v18l-8-1.8V4.8Z" fill="#F25022"/>
+          <path d="M9 6.2 6 7.1v9.8l3 .9V6.2Z" fill="#FFB900"/>
+        </svg>
+      `,
+      adobe: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="4" fill="#FF0000"/>
+          <path d="M7 19 10.2 5H13l5 14h-2.8l-1-3H9.8l-1 3H7Z" fill="#FFFFFF"/>
+        </svg>
+      `,
+      cloud: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7.2 18.5h10.1a3.6 3.6 0 0 0 .5-7.2 5.2 5.2 0 0 0-10.1 1.3A3.2 3.2 0 0 0 7.2 18.5Z" fill="#4285F4"/>
+        </svg>
+      `,
+      default: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="#8A5CFF"/>
+          <path d="M8.3 12h7.4" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      `
+    };
+
+    const PRODUCTS = [
+      // YouTube
+      { id:"yt-1y-change-235", title:"YouTube Premium (1 Năm) - Mỗi tháng đổi 1 lần", price:235000, priceText:"235.000 VNĐ", cat:"youtube", icon:"youtube", tags:["hot","deal"] },
+      { id:"yt-1y-fixed-499", title:"YouTube Premium (1 Năm) - Cố định, không chuyển fam", price:499000, priceText:"499.000 VNĐ", cat:"youtube", icon:"youtube", tags:["hot"] },
+      { id:"yt-6m-fixed-350", title:"YouTube Premium (6 Tháng) - Cố định, không chuyển fam", price:350000, priceText:"350.000 VNĐ", cat:"youtube", icon:"youtube", tags:["deal"] },
+      { id:"yt-1m-20", title:"YouTube Premium (1 Tháng)", price:20000, priceText:"20.000 VNĐ", cat:"youtube", icon:"youtube", tags:["hot","deal"] },
+      { id:"yt-3m", title:"YouTube Premium (3 Tháng)", price:null, priceText:"-", cat:"youtube", icon:"youtube", tags:["contact"] },
+      { id:"yt-6m", title:"YouTube Premium (6 Tháng)", price:null, priceText:"-", cat:"youtube", icon:"youtube", tags:["contact"] },
+
+      // ChatGPT Pro
+      { id:"chatgpt-2m-80", title:"ChatGPT Pro (2 Tháng)", price:80000, priceText:"80.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot","deal"] },
+      { id:"chatgpt-3m-120", title:"ChatGPT Pro (3 Tháng)", price:120000, priceText:"120.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
+      { id:"chatgpt-6m-220", title:"ChatGPT Pro (6 Tháng)", price:220000, priceText:"220.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
+
+      // Entertainment
+      { id:"netflix-1m", title:"Netflix Premium 4k (1 Tháng)", price:null, priceText:"-", cat:"entertain", icon:"netflix", tags:["contact"] },
+      { id:"netflix-3m", title:"Netflix Premium 4k (3 Tháng)", price:null, priceText:"-", cat:"entertain", icon:"netflix", tags:["contact"] },
+      { id:"netflix-6m", title:"Netflix Premium 4k (6 Tháng)", price:null, priceText:"-", cat:"entertain", icon:"netflix", tags:["contact"] },
+      { id:"netflix-12m", title:"Netflix Premium 4k (12 Tháng)", price:null, priceText:"-", cat:"entertain", icon:"netflix", tags:["contact"] },
+      { id:"spotify-4m-99", title:"Spotify Premium (4 Tháng)", price:99000, priceText:"99.000 VNĐ", cat:"entertain", icon:"spotify", tags:["deal"] },
+
+      // Creative
+      { id:"canva-3y-19", title:"Canva Pro (3 Năm)", price:19000, priceText:"19.000 VNĐ", cat:"creative", icon:"canva", tags:["deal","hot"] },
+      { id:"adobe-4m-99", title:"Adobe Premium - Full App (4 Tháng)", price:99000, priceText:"99.000 VNĐ", cat:"creative", icon:"adobe", tags:["deal"] },
+
+      // Office
+      { id:"ms365-1y-99", title:"Microsoft Office 365 + 1TB OneDrive (1 Năm)", price:99000, priceText:"99.000 VNĐ", cat:"office", icon:"office", tags:["deal"] },
+
+      // Game
+      { id:"discord-basic", title:"Discord Nitro Basic (1 Năm)", price:null, priceText:"-", cat:"game", icon:"discord", tags:["contact"] },
+      { id:"discord-pro", title:"Discord Nitro - Cao cấp (1 Năm)", price:null, priceText:"-", cat:"game", icon:"discord", tags:["contact"] },
+    ];
+
+    const state = { q:"", cat:"all", sort:"hot", tag:"all" };
+    const grid = document.getElementById("grid");
+    const qEl = document.getElementById("q");
+    const catEl = document.getElementById("cat");
+    const sortEl = document.getElementById("sort");
+    const tags = [...document.querySelectorAll(".tag")];
+
+    const iconFor = (key) => ICONS[key] || ICONS.default;
+
+    function scoreHot(p){
+      let s = 0;
+      if(p.tags.includes("hot")) s += 50;
+      if(p.tags.includes("deal")) s += 20;
+      if(p.cat === "youtube") s += 10;
+      if(p.id.startsWith("chatgpt")) s += 10;
+      return s;
+    }
+
+    function matches(p){
+      const q = state.q.trim().toLowerCase();
+      const okQ = !q || p.title.toLowerCase().includes(q);
+      const okCat = state.cat === "all" || p.cat === state.cat;
+      const okTag = state.tag === "all" || p.tags.includes(state.tag);
+      return okQ && okCat && okTag;
+    }
+
+    function sorted(list){
+      const a = [...list];
+      if(state.sort === "hot"){
+        a.sort((x,y)=> scoreHot(y)-scoreHot(x) || (x.price ?? 1e15)-(y.price ?? 1e15));
+      } else if(state.sort === "priceAsc"){
+        a.sort((x,y)=> (x.price ?? 1e15)-(y.price ?? 1e15));
+      } else if(state.sort === "priceDesc"){
+        a.sort((x,y)=> (y.price ?? -1)-(x.price ?? -1));
+      } else if(state.sort === "nameAsc"){
+        a.sort((x,y)=> x.title.localeCompare(y.title,"vi"));
+      }
+      return a;
+    }
+
+    function catLabel(c){
+      return ({
+        youtube:"YouTube Premium",
+        ai:"ChatGPT & AI Tools",
+        entertain:"Giải trí",
+        cloud:"Cloud & Lưu trữ",
+        creative:"Thiết kế & Sáng tạo",
+        office:"Văn phòng",
+        game:"Game & Khác"
+      })[c] || "Khác";
+    }
+
+    function tagLabel(p){
+      const parts = [];
+      if(p.tags.includes("hot")) parts.push("Bán chạy");
+      if(p.tags.includes("deal")) parts.push("Giá tốt");
+      if(p.tags.includes("contact")) parts.push("Báo giá");
+      return parts.length ? parts.join(" • ") : "—";
+    }
+
+    function priceNode(p){
+      if(p.price == null) return `<div class="price na">Liên hệ</div>`;
+      return `<div class="price">${p.priceText}</div>`;
+    }
+
+    function card(p){
+      const isContact = p.price == null;
+      const btnText = isContact ? "Liên hệ" : "Mua ngay";
+      const btnClass = isContact ? "btn" : "btn buy";
+      return `
+        <article class="card">
+          <div class="top">
+            <div class="app" aria-hidden="true">${iconFor(p.icon)}</div>
+            <div>
+              <p class="name">${p.title}</p>
+              <p class="meta">${catLabel(p.cat)} • ${tagLabel(p)}</p>
+            </div>
+          </div>
+          <div class="bottom">
+            ${priceNode(p)}
+            <button class="${btnClass}" data-buy="${p.id}">
+              ${btnText} <span style="opacity:.85">→</span>
+            </button>
+          </div>
+        </article>
+      `;
+    }
+
+    function openFB(){
+      window.open(CONFIG.facebookLink, "_blank", "noopener,noreferrer");
+    }
+
+    function render(){
+      const filtered = PRODUCTS.filter(matches);
+      const list = sorted(filtered);
+      grid.innerHTML = list.map(card).join("");
+
+      // ✅ yêu cầu: nhấn mua/nhấn dòng gói => mở Facebook
+      grid.querySelectorAll("[data-buy]").forEach(btn=>{
+        btn.addEventListener("click", openFB);
+      });
+    }
+
+    // Controls
+    qEl.addEventListener("input", (e)=>{ state.q = e.target.value; render(); });
+    catEl.addEventListener("change",(e)=>{ state.cat = e.target.value; render(); });
+    sortEl.addEventListener("change",(e)=>{ state.sort = e.target.value; render(); });
+
+    tags.forEach(t=>{
+      t.addEventListener("click", ()=>{
+        tags.forEach(x=>x.classList.remove("active"));
+        t.classList.add("active");
+        state.tag = t.dataset.tag;
+        render();
+      });
+    });
+
+    // FB buttons
+    document.getElementById("btnFBTop").addEventListener("click", openFB);
+    document.getElementById("btnFBHero").addEventListener("click", openFB);
+    document.getElementById("btnFBPay").addEventListener("click", openFB);
+
+    // Nổi bật: click vào option-row hoặc nút mua => mở Facebook
+    document.querySelectorAll("[data-buy]").forEach(el=> el.addEventListener("click", openFB));
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Reveal
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add("show"); });
+    },{ threshold: .12 });
+    document.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+
+    render();
+  </script>
+</body>
+</html>
