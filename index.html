@@ -356,6 +356,7 @@
       letter-spacing:.2px;
       white-space:nowrap;
     }
+
     .btn{
       border:none;
       border-radius: 999px;
@@ -571,7 +572,7 @@
       <div class="section-head">
         <div>
           <h3>Nổi bật nhất</h3>
-          <p>Tập trung 2 sản phẩm chủ lực: ChatGPT Pro & YouTube Premium</p>
+          <p>Tập trung 4 sản phẩm chủ lực: ChatGPT Pro, YouTube Premium, CapCut Pro, Gemini Pro</p>
         </div>
       </div>
 
@@ -641,6 +642,68 @@
             <button class="btn buy feature-cta" data-buy="yt-1m-20">Mua Ngay</button>
           </div>
         </div>
+
+        <!-- CAPCUT FEATURE -->
+        <div class="feature-card">
+          <div class="feature-inner">
+            <div>
+              <div class="badge hot">🔥 HOT • BÁN CHẠY</div>
+              <p class="feature-title">CapCut Pro</p>
+              <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
+            </div>
+            <div class="big-price">
+              <div class="from">Giá từ</div>
+              <div class="price">65.000đ</div>
+            </div>
+          </div>
+
+          <div class="feature-actions">
+            <div class="option-list">
+              <div class="option-row" data-buy="capcut-35-45d-65">
+                <div class="left">CapCut Pro – 35–45 ngày</div>
+                <div class="right">65.000 VNĐ</div>
+              </div>
+              <div class="option-row" data-buy="capcut-2m-72">
+                <div class="left">CapCut Pro – 2 Tháng</div>
+                <div class="right">72.000 VNĐ</div>
+              </div>
+            </div>
+            <button class="btn buy feature-cta" data-buy="capcut-35-45d-65">Mua Ngay</button>
+          </div>
+        </div>
+
+        <!-- GEMINI FEATURE -->
+        <div class="feature-card">
+          <div class="feature-inner">
+            <div>
+              <div class="badge hot">🔥 HOT • BÁN CHẠY</div>
+              <p class="feature-title">Gemini Pro + Google One 2TB</p>
+              <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
+            </div>
+            <div class="big-price">
+              <div class="from">Giá từ</div>
+              <div class="price">60.000đ</div>
+            </div>
+          </div>
+
+          <div class="feature-actions">
+            <div class="option-list">
+              <div class="option-row" data-buy="gemini-4m-kbh-60">
+                <div class="left">4 tháng + KBH</div>
+                <div class="right">60.000 VNĐ</div>
+              </div>
+              <div class="option-row" data-buy="gemini-4m-bhf-90">
+                <div class="left">4 tháng + BHF</div>
+                <div class="right">90.000 VNĐ</div>
+              </div>
+              <div class="option-row" data-buy="gemini-12m-bh3m-150">
+                <div class="left">12 tháng + BH 3 Tháng</div>
+                <div class="right">150.000 VNĐ</div>
+              </div>
+            </div>
+            <button class="btn buy feature-cta" data-buy="gemini-4m-kbh-60">Mua Ngay</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -664,6 +727,8 @@
             <option value="all">Tất cả danh mục</option>
             <option value="youtube">YouTube Premium</option>
             <option value="ai">ChatGPT & AI Tools</option>
+            <option value="capcut">CapCut Pro</option>
+            <option value="gemini">Gemini + Google One</option>
             <option value="entertain">Giải trí</option>
             <option value="cloud">Cloud & Lưu trữ</option>
             <option value="creative">Thiết kế & Sáng tạo</option>
@@ -777,6 +842,19 @@
                 fill="#E8FFF7" opacity=".95"/>
         </svg>
       `,
+      capcut: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="4" width="16" height="16" rx="5" fill="#111827"/>
+          <path d="M7 9h10M7 15h10M9 7l6 10M15 7l-6 10" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      `,
+      gemini: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="#1A73E8"/>
+          <path d="M12 6.5l1.4 3.2 3.4.3-2.6 2.2.8 3.3-3-1.8-3 1.8.8-3.3-2.6-2.2 3.4-.3L12 6.5Z"
+                fill="#FFFFFF" opacity=".95"/>
+        </svg>
+      `,
       netflix: `
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7 4h3l4 10V4h3v16c-1 .1-2 .2-3 .4l-4-10v10c-1-.1-2-.2-3-.3V4Z" fill="#E50914"/>
@@ -843,6 +921,15 @@
       { id:"chatgpt-3m-120", title:"ChatGPT Pro (3 Tháng)", price:120000, priceText:"120.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
       { id:"chatgpt-6m-220", title:"ChatGPT Pro (6 Tháng)", price:220000, priceText:"220.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
 
+      // CapCut Pro (NEW)
+      { id:"capcut-35-45d-65", title:"CapCut Pro (35–45 ngày)", price:65000, priceText:"65.000 VNĐ", cat:"capcut", icon:"capcut", tags:["hot","deal"] },
+      { id:"capcut-2m-72", title:"CapCut Pro (2 Tháng)", price:72000, priceText:"72.000 VNĐ", cat:"capcut", icon:"capcut", tags:["hot","deal"] },
+
+      // Gemini Pro + Google One 2TB (NEW)
+      { id:"gemini-4m-kbh-60", title:"Gemini Pro + Google One 2TB (4 tháng + KBH)", price:60000, priceText:"60.000 VNĐ", cat:"gemini", icon:"gemini", tags:["hot","deal"] },
+      { id:"gemini-4m-bhf-90", title:"Gemini Pro + Google One 2TB (4 tháng + BHF)", price:90000, priceText:"90.000 VNĐ", cat:"gemini", icon:"gemini", tags:["hot"] },
+      { id:"gemini-12m-bh3m-150", title:"Gemini Pro + Google One 2TB (12 tháng + BH 3 Tháng)", price:150000, priceText:"150.000 VNĐ", cat:"gemini", icon:"gemini", tags:["hot"] },
+
       // Entertainment (Netflix FIX)
       { id:"netflix-1m",  title:"Netflix Premium 4k (1 Tháng)",  price:80000,  priceText:"80.000 VNĐ",  cat:"entertain", icon:"netflix", tags:["contact"] },
       { id:"netflix-3m",  title:"Netflix Premium 4k (3 Tháng)",  price:200000, priceText:"200.000 VNĐ", cat:"entertain", icon:"netflix", tags:["contact"] },
@@ -878,6 +965,8 @@
       if(p.tags.includes("deal")) s += 20;
       if(p.cat === "youtube") s += 10;
       if(String(p.id).startsWith("chatgpt")) s += 10;
+      if(p.cat === "capcut") s += 10;
+      if(p.cat === "gemini") s += 10;
       return s;
     }
 
@@ -907,6 +996,8 @@
       return ({
         youtube:"YouTube Premium",
         ai:"ChatGPT & AI Tools",
+        capcut:"CapCut Pro",
+        gemini:"Gemini + Google One",
         entertain:"Giải trí",
         cloud:"Cloud & Lưu trữ",
         creative:"Thiết kế & Sáng tạo",
@@ -994,5 +1085,3 @@
   </script>
 </body>
 </html>
-
-
