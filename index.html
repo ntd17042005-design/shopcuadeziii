@@ -11,12 +11,14 @@
       --bg:#070A12;
       --text:#EAF0FF;
       --muted:rgba(234,240,255,.72);
+      --line:rgba(255,255,255,.12);
       --glow1:#5FE6FF;
       --glow2:#8A5CFF;
       --glow3:#FF4FD8;
       --ok:#39ff88;
       --shadow: 0 20px 60px rgba(0,0,0,.55);
       --radius:22px;
+      --radius2:16px;
       --max:1180px;
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
@@ -423,9 +425,15 @@
       flex:0 0 auto;
       overflow:hidden;
     }
-    .app svg{ width:28px; height:28px; }
-    /* Cho icon dạng hình ảnh */
-    .app img{ width:28px; height:28px; object-fit:contain; display:block; }
+
+    /* ✅ quan trọng: để icon IMG hiển thị đúng */
+    .app img{
+      width:28px;
+      height:28px;
+      object-fit:contain;
+      display:block;
+    }
+    .app svg{ width:28px; height:28px; display:block; }
 
     .name{
       margin:0;
@@ -528,7 +536,7 @@
       <div class="hero-grid">
         <div>
           <h2>
-            <span class="grad">ChatGPT Pro & YouTube Premium</span><br/>
+            <span class="grad">Premium Accounts</span><br/>
             Giá rẻ nhất – Uy tín nhất thị trường
           </h2>
           <p>
@@ -568,26 +576,28 @@
       </div>
     </section>
 
+    <!-- =================== FEATURED =================== -->
     <section class="section reveal" id="noibat">
       <div class="section-head">
         <div>
           <h3>Nổi bật nhất</h3>
-          <p>Tập trung 4 sản phẩm chủ lực: ChatGPT Pro, YouTube Premium, CapCut Pro, Gemini Pro</p>
+          <p>4 sản phẩm chủ lực: ChatGPT • YouTube • CapCut • Gemini</p>
         </div>
       </div>
 
       <div class="featured">
+
         <!-- CHATGPT FEATURE -->
         <div class="feature-card">
           <div class="feature-inner">
             <div>
               <div class="badge hot">🔥 HOT • BÁN CHẠY NHẤT</div>
-              <p class="feature-title">ChatGPT Pro 1 Tháng</p>
+              <p class="feature-title">ChatGPT Pro</p>
               <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
             </div>
             <div class="big-price">
               <div class="from">Giá từ</div>
-              <div class="price">40.000đ</div>
+              <div class="price">80.000đ</div>
             </div>
           </div>
 
@@ -615,20 +625,20 @@
           <div class="feature-inner">
             <div>
               <div class="badge hot">🔥 HOT • BÁN CHẠY NHẤT</div>
-              <p class="feature-title">YouTube Premium 1 Tháng</p>
+              <p class="feature-title">YouTube Premium</p>
               <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
             </div>
             <div class="big-price">
               <div class="from">Giá từ</div>
-              <div class="price">40.000đ</div>
+              <div class="price">20.000đ</div>
             </div>
           </div>
 
           <div class="feature-actions">
             <div class="option-list">
               <div class="option-row" data-buy="yt-1m-20">
-                <div class="left">YouTube Premium – 2 Tháng</div>
-                <div class="right">80.000 VNĐ</div>
+                <div class="left">YouTube Premium – 1 Tháng</div>
+                <div class="right">20.000 VNĐ</div>
               </div>
               <div class="option-row" data-buy="yt-6m-fixed-350">
                 <div class="left">YouTube Premium – 6 Tháng (Cố định)</div>
@@ -647,7 +657,7 @@
         <div class="feature-card">
           <div class="feature-inner">
             <div>
-              <div class="badge hot">🔥 HOT • BÁN CHẠY</div>
+              <div class="badge hot">🔥 HOT</div>
               <p class="feature-title">CapCut Pro</p>
               <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
             </div>
@@ -659,7 +669,7 @@
 
           <div class="feature-actions">
             <div class="option-list">
-              <div class="option-row" data-buy="capcut-35-45d-65">
+              <div class="option-row" data-buy="capcut-35_45d-65">
                 <div class="left">CapCut Pro – 35–45 ngày</div>
                 <div class="right">65.000 VNĐ</div>
               </div>
@@ -668,7 +678,7 @@
                 <div class="right">72.000 VNĐ</div>
               </div>
             </div>
-            <button class="btn buy feature-cta" data-buy="capcut-35-45d-65">Mua Ngay</button>
+            <button class="btn buy feature-cta" data-buy="capcut-35_45d-65">Mua Ngay</button>
           </div>
         </div>
 
@@ -676,7 +686,7 @@
         <div class="feature-card">
           <div class="feature-inner">
             <div>
-              <div class="badge hot">🔥 HOT • BÁN CHẠY</div>
+              <div class="badge hot">🔥 HOT</div>
               <p class="feature-title">Gemini Pro + Google One 2TB</p>
               <p class="feature-sub">Chọn gói bên dưới (nhấn vào là mở Facebook chốt đơn).</p>
             </div>
@@ -696,7 +706,7 @@
                 <div class="left">4 tháng + BHF</div>
                 <div class="right">90.000 VNĐ</div>
               </div>
-              <div class="option-row" data-buy="gemini-12m-bh3m-150">
+              <div class="option-row" data-buy="gemini-12m-bh3-150">
                 <div class="left">12 tháng + BH 3 Tháng</div>
                 <div class="right">150.000 VNĐ</div>
               </div>
@@ -704,9 +714,11 @@
             <button class="btn buy feature-cta" data-buy="gemini-4m-kbh-60">Mua Ngay</button>
           </div>
         </div>
+
       </div>
     </section>
 
+    <!-- =================== ALL PRODUCTS =================== -->
     <section class="section reveal" id="sanpham">
       <div class="section-head">
         <div>
@@ -718,7 +730,7 @@
       <div class="controls">
         <div class="field" title="Tìm theo tên sản phẩm">
           <span style="opacity:.75">🔎</span>
-          <input id="q" placeholder="Tìm: ChatGPT, YouTube, Netflix, Canva..." />
+          <input id="q" placeholder="Tìm: ChatGPT, YouTube, CapCut, Gemini..." />
         </div>
 
         <div class="field mini" title="Lọc danh mục">
@@ -728,7 +740,7 @@
             <option value="youtube">YouTube Premium</option>
             <option value="ai">ChatGPT & AI Tools</option>
             <option value="capcut">CapCut Pro</option>
-            <option value="gemini">Gemini + Google One</option>
+            <option value="gemini">Gemini / Google One</option>
             <option value="entertain">Giải trí</option>
             <option value="cloud">Cloud & Lưu trữ</option>
             <option value="creative">Thiết kế & Sáng tạo</option>
@@ -815,10 +827,9 @@
   <script>
     const CONFIG = { facebookLink: "https://www.facebook.com/dezi1704" };
 
-    // ✅ 3 logo đúng vị trí icon sản phẩm:
-    // - capcut: dùng base64 bạn gửi
-    // - gemini: để file gemini.png cùng thư mục index.html
-    // - chatgpt: để file chatgpt.png cùng thư mục index.html (nếu bạn muốn dùng ảnh thay SVG)
+    // ✅ ICONS: dùng ảnh file rời để KHÔNG nhầm + load nhanh
+    // Đặt file cùng thư mục index.html:
+    // chatgpt.png / capcut.png / gemini.jpg
     const ICONS = {
       youtube: `
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -826,15 +837,9 @@
           <path d="M11 10v4l4-2-4-2z" fill="#FFFFFF"/>
         </svg>
       `,
-
-      // CHATGPT: dùng ảnh (đặt tên chatgpt.png)
-      chatgpt: `<img alt="ChatGPT" src="chatgpt.png" />`,
-
-      // CAPCUT: base64 bạn gửi
-      capcut: `<img alt="CapCut" src="data:image/png;base64,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" />`,
-
-      // GEMINI: dùng ảnh (đặt tên gemini.png)
-      gemini: `<img alt="Gemini" src="gemini.png" />`,
+      chatgpt: `<img src="chatgpt.png" alt="ChatGPT" />`,
+      capcut: `<img src="capcut.png" alt="CapCut" />`,
+      gemini: `<img src="gemini.jpg" alt="Gemini" />`,
 
       netflix: `
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -894,29 +899,23 @@
       { id:"yt-1y-fixed-499", title:"YouTube Premium (1 Năm) - Cố định, không chuyển fam", price:499000, priceText:"499.000 VNĐ", cat:"youtube", icon:"youtube", tags:["hot"] },
       { id:"yt-6m-fixed-350", title:"YouTube Premium (6 Tháng) - Cố định, không chuyển fam", price:350000, priceText:"350.000 VNĐ", cat:"youtube", icon:"youtube", tags:["deal"] },
       { id:"yt-1m-20", title:"YouTube Premium (1 Tháng)", price:20000, priceText:"20.000 VNĐ", cat:"youtube", icon:"youtube", tags:["hot","deal"] },
-      { id:"yt-3m", title:"YouTube Premium (3 Tháng)", price:null, priceText:"-", cat:"youtube", icon:"youtube", tags:["contact"] },
-      { id:"yt-6m", title:"YouTube Premium (6 Tháng)", price:null, priceText:"-", cat:"youtube", icon:"youtube", tags:["contact"] },
 
       // ChatGPT Pro
       { id:"chatgpt-2m-80", title:"ChatGPT Pro (2 Tháng)", price:80000, priceText:"80.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot","deal"] },
       { id:"chatgpt-3m-120", title:"ChatGPT Pro (3 Tháng)", price:120000, priceText:"120.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
       { id:"chatgpt-6m-220", title:"ChatGPT Pro (6 Tháng)", price:220000, priceText:"220.000 VNĐ", cat:"ai", icon:"chatgpt", tags:["hot"] },
 
-      // CapCut Pro
-      { id:"capcut-35-45d-65", title:"CapCut Pro (35–45 ngày)", price:65000, priceText:"65.000 VNĐ", cat:"capcut", icon:"capcut", tags:["hot","deal"] },
-      { id:"capcut-2m-72", title:"CapCut Pro (2 Tháng)", price:72000, priceText:"72.000 VNĐ", cat:"capcut", icon:"capcut", tags:["hot","deal"] },
+      // ✅ CapCut
+      { id:"capcut-35_45d-65", title:"CapCut Pro (35–45 ngày)", price:65000, priceText:"65.000 VNĐ", cat:"capcut", icon:"capcut", tags:["hot","deal"] },
+      { id:"capcut-2m-72", title:"CapCut Pro (2 Tháng)", price:72000, priceText:"72.000 VNĐ", cat:"capcut", icon:"capcut", tags:["deal"] },
 
-      // Gemini Pro + Google One 2TB
+      // ✅ Gemini
       { id:"gemini-4m-kbh-60", title:"Gemini Pro + Google One 2TB (4 tháng + KBH)", price:60000, priceText:"60.000 VNĐ", cat:"gemini", icon:"gemini", tags:["hot","deal"] },
       { id:"gemini-4m-bhf-90", title:"Gemini Pro + Google One 2TB (4 tháng + BHF)", price:90000, priceText:"90.000 VNĐ", cat:"gemini", icon:"gemini", tags:["hot"] },
-      { id:"gemini-12m-bh3m-150", title:"Gemini Pro + Google One 2TB (12 tháng + BH 3 Tháng)", price:150000, priceText:"150.000 VNĐ", cat:"gemini", icon:"gemini", tags:["hot"] },
+      { id:"gemini-12m-bh3-150", title:"Gemini Pro + Google One 2TB (12 tháng + BH 3 Tháng)", price:150000, priceText:"150.000 VNĐ", cat:"gemini", icon:"gemini", tags:["hot"] },
 
       // Entertainment
       { id:"netflix-1m",  title:"Netflix Premium 4k (1 Tháng)",  price:80000,  priceText:"80.000 VNĐ",  cat:"entertain", icon:"netflix", tags:["contact"] },
-      { id:"netflix-3m",  title:"Netflix Premium 4k (3 Tháng)",  price:200000, priceText:"200.000 VNĐ", cat:"entertain", icon:"netflix", tags:["contact"] },
-      { id:"netflix-6m",  title:"Netflix Premium 4k (6 Tháng)",  price:460000, priceText:"460.000 VNĐ", cat:"entertain", icon:"netflix", tags:["contact"] },
-      { id:"netflix-12m", title:"Netflix Premium 4k (12 Tháng)", price:940000, priceText:"940.000 VNĐ", cat:"entertain", icon:"netflix", tags:["contact"] },
-
       { id:"spotify-4m-99", title:"Spotify Premium (4 Tháng)", price:120000, priceText:"120.000 VNĐ", cat:"entertain", icon:"spotify", tags:["deal"] },
 
       // Creative
@@ -928,7 +927,6 @@
 
       // Game
       { id:"discord-basic", title:"Discord Nitro Basic (1 Năm)", price:null, priceText:"-", cat:"game", icon:"discord", tags:["contact"] },
-      { id:"discord-pro", title:"Discord Nitro - Cao cấp (1 Năm)", price:null, priceText:"-", cat:"game", icon:"discord", tags:["contact"] },
     ];
 
     const state = { q:"", cat:"all", sort:"hot", tag:"all" };
@@ -946,8 +944,8 @@
       if(p.tags.includes("deal")) s += 20;
       if(p.cat === "youtube") s += 10;
       if(String(p.id).startsWith("chatgpt")) s += 10;
-      if(p.cat === "capcut") s += 10;
-      if(p.cat === "gemini") s += 10;
+      if(String(p.id).startsWith("capcut")) s += 9;
+      if(String(p.id).startsWith("gemini")) s += 9;
       return s;
     }
 
@@ -978,7 +976,7 @@
         youtube:"YouTube Premium",
         ai:"ChatGPT & AI Tools",
         capcut:"CapCut Pro",
-        gemini:"Gemini + Google One",
+        gemini:"Gemini / Google One",
         entertain:"Giải trí",
         cloud:"Cloud & Lưu trữ",
         creative:"Thiết kế & Sáng tạo",
